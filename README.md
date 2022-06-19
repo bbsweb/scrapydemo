@@ -1,6 +1,6 @@
 ## 安装依赖
 ```bash
-pip install scrapy
+pip install -r requirements.txt
 ```
 
 ## 爬虫列表

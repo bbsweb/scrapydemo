@@ -12,11 +12,11 @@ class ImageSpider(scrapy.Spider):
         },
     }
 
-    start_urls = ['https://bbsweb.xyz/demo/scrapy-img/']
+    start_urls = ['https://bbsweb.xyz/scrapy/img/']
 
     def parse(self, response, **kwargs):
         # 当前页面的图片列表
-        items = response.xpath('//*[@id="__docusaurus"]/div[2]/div/div')
+        items = response.xpath('//*[@id="__docusaurus"]/div[2]/div')
         # 获取列表内所有图片地址
         images = items.xpath('div/img/@src').extract()
 
